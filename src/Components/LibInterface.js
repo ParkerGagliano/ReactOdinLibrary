@@ -1,6 +1,6 @@
 import BookInput from './BookInput';
 import BookList from './BookList';
-export default function LibInterface({books}) {
+export default function LibInterface({books, addBook}) {
     
 
     
@@ -8,7 +8,7 @@ export default function LibInterface({books}) {
         <div className="container-fluid">
            <div className="row">
                 <div className="col-4">
-                    <BookInput />
+                    <BookInput addBook={addBook} />
                 </div>
                 <div className="col-8">
                     <BookList books={books} />

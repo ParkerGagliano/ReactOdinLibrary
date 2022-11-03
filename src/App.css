@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+.container_2 {
+  -webkit-transform: rotate(90deg);  /* to support Safari and Android browser */
+  -ms-transform: rotate(90deg);      /* to support IE 9 */
+  transform: rotate(90deg);
+}

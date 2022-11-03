@@ -4,13 +4,33 @@ import { useState } from 'react';
 import AddBookButton from './Components/AddBookButton';
 import BookInput from './Components/BookInput';
 import LibInterface from './Components/LibInterface';
+import DisplayBook from './Components/DisplayBook';
 function App() {
-  let books = [{title: 'joe', author: 'mama', pages: 239, read: true}, {title: 'joe biden', author: 'mamanan a a', pages: 239, read: true}, {title: 'joe a', author: 'mama dsa s', pages: 239, read: true}, {title: 'joe', author: 'mama', pages: 239, read: true}]
+
+  const [books, setBooks] = useState([{title: 'joe', author: 'mama', pages: 239, read: true}, {title: 'joe biden', author: 'mamanan a a', pages: 239, read: true}, {title: 'joe a', author: 'mama dsa s', pages: 239, read: true}, {title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true}]);
+
+
+  function addBook(bookToAdd) {
+    return setBooks([...books, bookToAdd])
+  }
+
+
   return (
     <div className="App">
-      <LibInterface books={books}/>
+      <div className="container-fluid">
+        <LibInterface books={books} addBook={addBook}/>
+      </div>
+      <div className="container-large">
+        <div className="row justify-content-center">
+          <div className="col-6">
+            <DisplayBook book={{title: 'joe', author: 'biden'}}></DisplayBook>
+          </div>
+        </div>
+      </div>
+      
 
-
+    
+      
 
       
 
