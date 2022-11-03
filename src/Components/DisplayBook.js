@@ -1,4 +1,4 @@
-export default function DisplayBook({book}) {
+export default function DisplayBook({book, title}) {
     return (
         <div className="container-fluid">
             <div className="row">
@@ -6,7 +6,7 @@ export default function DisplayBook({book}) {
                     <h4>Title</h4>
                 </div>
                 <div className="col">
-                    {book.title}
+                    {title}
                 </div>
             </div>
             <div className="row">

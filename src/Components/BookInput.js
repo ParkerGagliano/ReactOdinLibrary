@@ -1,4 +1,4 @@
-export default function BookInput({addBook}) {
+export default function BookInput({Title, titleChange}) {
     return (
         <div className="container-fluid">
             <div className="row">
@@ -6,7 +6,7 @@ export default function BookInput({addBook}) {
             </div>
             <div className="row">
                 <div className="col">
-                    <input type="text" className="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1"/>
+                    <input value={Title} onChange={(e)=>{titleChange(e.target.value)}}  type="text" className="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1"/>
                 </div>
             </div>
             <div className="row mt-2">
@@ -27,11 +27,6 @@ export default function BookInput({addBook}) {
                     <input type="checkbox" aria-label="Pages" aria-describedby="basic-addon1"/>
                 </div>
             </div>
-            <div className="row mt-2">
-                <button onClick={addBook({title: 'newtest', author: 'newtest1'})}></button>
-            </div>
-
-
         </div>
     )
 }

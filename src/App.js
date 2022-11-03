@@ -7,25 +7,17 @@ import LibInterface from './Components/LibInterface';
 import DisplayBook from './Components/DisplayBook';
 function App() {
 
-  const [books, setBooks] = useState([{title: 'joe', author: 'mama', pages: 239, read: true}, {title: 'joe biden', author: 'mamanan a a', pages: 239, read: true}, {title: 'joe a', author: 'mama dsa s', pages: 239, read: true}, {title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true}]);
+  let books = [{title: 'joe', author: 'mama', pages: 239, read: true}, {title: 'joe biden', author: 'mamanan a a', pages: 239, read: true}, {title: 'joe a', author: 'mama dsa s', pages: 239, read: true}, {title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true}];
 
 
-  function addBook(bookToAdd) {
-    return setBooks([...books, bookToAdd])
-  }
 
 
   return (
     <div className="App">
       <div className="container-fluid">
-        <LibInterface books={books} addBook={addBook}/>
+        <LibInterface books={books}></LibInterface>
       </div>
       <div className="container-large">
-        <div className="row justify-content-center">
-          <div className="col-6">
-            <DisplayBook book={{title: 'joe', author: 'biden'}}></DisplayBook>
-          </div>
-        </div>
       </div>
       
 
