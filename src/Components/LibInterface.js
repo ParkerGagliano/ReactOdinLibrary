@@ -1,5 +1,4 @@
-import BookInput from './BookInput';
-import BookDisplay from './BookDisplay';
+import BookInput from './BookInput'
 import AddBookButton from './AddBookButton';
 import DisplayBook from './DisplayBook';
 import { useState } from 'react';
@@ -27,17 +26,30 @@ export default function LibInterface({books}) {
     }
 
     function addBook() {
-        setBookList([...BookList, {title: textTitle, author: textAuthor, pages: intPages, read: boolRead}]);
-        clearBooks()
+        if (textTitle === '' || textAuthor === '' || intPages === null) {
+            alert('Please fill out all fields')
+        }
+        else {
+            if (Number.isInteger(parseInt(intPages))) {
+                setBookList([...BookList, {title: textTitle, author: textAuthor, pages: intPages, read: boolRead}]);
+                clearBooks()
+            }
+            else {
+                alert('Please enter a valid number of pages')
+            }
+        }
+        
     }
 
     function toggle(value){
-        if (value === null) {
+        if (value === false) {
+            temp.checked = true
             return true
+            
         }
         else {
-            temp.checked = !temp.checked;
-            return null
+            temp.checked = false
+            return false
         }
       }
 
@@ -45,7 +57,8 @@ export default function LibInterface({books}) {
         setTextTitle('');
         setTextAuthor('');
         setIntPages('');
-        setBoolRead(null);
+        setBoolRead(false);
+        temp.checked = false
 
     }
 
@@ -72,7 +85,7 @@ export default function LibInterface({books}) {
                 <div className="col-8">
                     <div className="container-fluid">
                         <div className="row">
-                            {BookList.map((bookinfo) => { return <div className='col-1'><button onClick={clickBook(bookinfo)} className="btn btn-block w-100"><Book onClick={clickBook} abrev = {createAbrev(bookinfo.title, bookinfo.author)}/></button></div> })}
+                            {BookList.map((bookinfo) => { return <div className='col-2 mt-2'><button onClick={clickBook(bookinfo)} className="btn btn-block w-100 bg-secondary"><Book onClick={clickBook} abrev = {createAbrev(bookinfo.title, bookinfo.author)}/></button></div> })}
                         </div>
                     </div>
                 </div>
