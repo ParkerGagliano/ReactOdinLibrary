@@ -7,7 +7,7 @@ import LibInterface from './Components/LibInterface';
 import DisplayBook from './Components/DisplayBook';
 function App() {
 
-  let books = [{title: 'joe', author: 'mama', pages: 239, read: true}, {title: 'joe biden', author: 'mamanan a a', pages: 239, read: true}, {title: 'joe a', author: 'mama dsa s', pages: 239, read: true}, {title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true}];
+  let books = [{title: 'Harry Potter', author: 'Writer Person', pages: 312, read: true}, {title: 'Dune', author: 'Frank Herbert', pages: 222, read: true}, {title: 'Fahrenheit 451', author: 'Ray Bradbury', pages: 451, read: true}, {title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true},{title: 'joe', author: 'mama', pages: 239, read: true}];
 
 
 

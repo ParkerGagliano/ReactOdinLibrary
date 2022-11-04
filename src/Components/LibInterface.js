@@ -72,11 +72,22 @@ export default function LibInterface({books}) {
                 <div className="col-8">
                     <div className="container-fluid">
                         <div className="row">
-                            {BookList.map((bookinfo) => { return <button onClick={clickBook(bookinfo)} className="btn btn-block w-100"><Book onClick={clickBook} abrev = {createAbrev(bookinfo.title, bookinfo.author)}/></button> })}
+                            {BookList.map((bookinfo) => { return <div className='col-1'><button onClick={clickBook(bookinfo)} className="btn btn-block w-100"><Book onClick={clickBook} abrev = {createAbrev(bookinfo.title, bookinfo.author)}/></button></div> })}
                         </div>
                     </div>
                 </div>
-                <DisplayBook title = {displayTitle} author={displayAuthor} pages={displayPages} read={displayRead}></DisplayBook>
+            <div className='row'>
+                <div className='col-4'>
+                {textTitle || textAuthor  ? <DisplayBook title={textTitle} author={textAuthor} pages={intPages} read={boolRead} info={'Book Preview'}/> : <div className="col-6"></div>}
+                    
+                    
+                </div>
+                <div className='col-2'></div>
+                <div className='col-4'>
+                   {displayTitle ? <DisplayBook title = {displayTitle} author={displayAuthor} pages={displayPages} read={displayRead} info={'Currently Selected Book'}></DisplayBook> : <div></div>} 
+                </div>
+            
+            </div>
             </div> 
         
             

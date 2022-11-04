@@ -1,36 +1,27 @@
-export default function DisplayBook({author, title, pages, read}) {
+export default function DisplayBook({author, title, pages, read, info}) {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-3">
-                    <h4>Title</h4>
-                </div>
+                <div className="col">{info}</div>
+            </div>
+            <div className="row">
                 <div className="col">
-                    {title}
+                    <h5>{title}</h5>
                 </div>
             </div>
             <div className="row">
-                <div className="col-3">
-                    <h4>Author:</h4>
-                </div>
                 <div className="col">
-                    {author}
+                    <h5>{author}</h5>
                 </div>
             </div>
             <div className="row">
-                <div className="col-3">
-                    <h4>Pages:</h4>
-                </div>
                 <div className="col">
-                    {pages}
+                    <h5>{pages}</h5>
                 </div>
             </div>
             <div className="row">
-                <div className="col-3">
-                    <h4>Has been read:</h4>
-                </div>
                 <div className="col">
-                    { read ? <h3>Yes</h3> :  <h3>No</h3>}
+                    { read ? <h3>Read</h3> :  <h3>Not Read</h3>}
                 </div>
             </div>
         </div>
