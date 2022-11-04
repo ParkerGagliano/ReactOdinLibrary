@@ -8,9 +8,8 @@ export default function BookList({books}) {
         
     }
     let loops = Math.ceil(books.length / 12)
-    
 
-   
+    
     return (
         <div className="container-fluid">
             <div className="container-fluid ">

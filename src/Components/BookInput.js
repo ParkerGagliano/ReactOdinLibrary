@@ -24,7 +24,7 @@ export default function BookInput({title, titleChange, author, authorChange, pag
                     <p>Has the book been read?</p>
                 </div>
                 <div className="col">
-                    <input type="checkbox" id="checkbox" value={read} onChange={(e)=>{readChange(toggle(read))}} aria-label="Pages" aria-describedby="basic-addon1"/>
+                    <input checked="true" type="checkbox" id="checkbox" value={read} onChange={(e)=>{readChange(toggle(read))}} aria-label="Pages" aria-describedby="basic-addon1"/>
                 </div>
             </div>
         </div>
